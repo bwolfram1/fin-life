@@ -7,13 +7,13 @@
     <link rel="shortcut icon" href="C:/Users/brand/Music/SwampHacks/imgs/fl.ico" type="image/x-icon" />
     <!-- Custom styles for this template -->
     <link href="C:/Users/brand/Music/SwampHacks/FinPage/baseStyle.css" rel="stylesheet">
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
   </head>
 
   <body class="back">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
+          <img class = "navbar-left" src="C:/Users/brand/Music/SwampHacks/imgs/finLifeLogo.png" height="45px" style="border-radius: 50%; padding-top:3px; padding-right:3px;">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -41,13 +41,41 @@
         <h1>Calculate</h1>
         <p class="lead">Have you ever wondered how much you will actually need to pay to pay off your loans? Well, this is a great place to find out exactly how much you will owe. </p>
       </div>
-      <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroup-sizing-sm">Amount borrowed</span>
-            </div>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+      <div>
+        <div class="col-sm-4">
+            <p class="lead">Amount Borrowed:</p> 
+            <input type="text" id="amBO">
+        </div>
+        <div class="col-sm-4">
+            <p class="lead">Interest Rate/APR (Decimal form)</p>
+            <input type="text" id="apr">
+        </div>
+        <div class="col-sm-4">
+            <p class="lead">Time (Years)</p>
+            <input type="text" id="time">
+        </div>
+          <button onclick="calcInterest()" style = "margin-top : 20px; margin-left:15px;">Calculate</button>
+          <div>
+            <p class="lead" style = "margin-top : 20px;">Your total loan is: </p>
+            <h2 class="lead" id="area"style = "margin-top : 20px; margin-left:15px;" >
+            </h2>
           </div>
-
+      </div>
+          <script>
+            function calcInterest() {
+              var pet = document.getElementById("amBO").value;
+              var pi = parseFloat(pet);
+              var art = document.getElementById("apr").value;
+              var ai = parseFloat(art);
+              var plus = ai * pi;
+              var tea = document.getElementById("time").value;
+              var ti = parseFloat(tea);
+              var calc2 = plus * ti;
+              var tot = calc2 + pi;
+              console.log(tot);
+              document.getElementById("area").innerHTML = "$ " + tot.toFixed(2);
+            }
+          </script>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>

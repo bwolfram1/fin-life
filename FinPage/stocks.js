@@ -59,7 +59,7 @@ $(function() {
 		];
 
 	//your cash flow
-	var cashflow = 100;
+	var cashflow = 1500;
 
 	/*
 	- your portfolio value

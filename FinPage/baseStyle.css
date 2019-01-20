@@ -38,3 +38,6 @@ body {
 .b1 {
   color: white;
 }
+.dash {
+  border-top: 1px solid black;
+}
