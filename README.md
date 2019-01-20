@@ -1,1 +1,1 @@
-# fit-life
+# fin-life
